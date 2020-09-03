@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/forecast_nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/forecast_nav_graph"
+    app:startDestination="@id/currentWeatherFragment">
 
+    <fragment
+        android:id="@+id/currentWeatherFragment"
+        android:name="com.example.forecastapp.ui.weather.current.CurrentWeatherFragment"
+        android:label="current_weather_fragment"
+        tools:layout="@layout/current_weather_fragment" />
+    <fragment
+        android:id="@+id/weeklyDetailWeatherFragment"
+        android:name="com.example.forecastapp.ui.weather.week.detail.WeeklyDetailWeatherFragment"
+        android:label="weekly_detail_weather_fragment"
+        tools:layout="@layout/weekly_detail_weather_fragment" />
+    <fragment
+        android:id="@+id/weeklyListWeatherFragment"
+        android:name="com.example.forecastapp.ui.weather.week.list.WeeklyListWeatherFragment"
+        android:label="weekly_list_weather_fragment"
+        tools:layout="@layout/weekly_list_weather_fragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.forecastapp.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>
